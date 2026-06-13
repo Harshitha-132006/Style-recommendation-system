@@ -1,0 +1,1 @@
+This is AI style reccomendation system where we can ask the outfit that u are getting doubt of this platform can suggest the best and u can see the outfits throught shoppig platform by using their links 
