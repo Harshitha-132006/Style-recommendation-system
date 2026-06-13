@@ -1,0 +1,119 @@
+/* ============================================================
+   STYLIOSENZ.AI — RESPONSIVE STYLES
+   ============================================================ */
+
+/* ── Large Desktop (1400px+) ── */
+@media (min-width: 1400px) {
+  .container { max-width: 1360px; }
+}
+
+/* ── Tablet (max 1024px) ── */
+@media (max-width: 1024px) {
+  .hero-content { grid-template-columns: 1fr; text-align: center; gap: 3rem; padding-top: 8rem; }
+  .hero-text .overline { justify-content: center; }
+  .hero-cta { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .hero-visual { display: none; }
+  .profile-grid { grid-template-columns: 1fr; }
+  .camera-panel { position: static; max-width: 400px; margin: 0 auto; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+/* ── Tablet Small (max 768px) ── */
+@media (max-width: 768px) {
+  :root { font-size: 15px; }
+
+  .section { padding: 3.5rem 0; }
+
+  /* Nav */
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-actions .btn { display: none; }
+  .nav-actions .btn-icon:not(#theme-toggle) { display: none; }
+
+  /* Hero */
+  .display-heading { font-size: clamp(2rem, 8vw, 3.5rem); }
+  .hero-stats { gap: 1.2rem; flex-wrap: wrap; }
+
+  /* Profile */
+  .chip { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+
+  /* Products */
+  .products-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+  .product-card-body { padding: 0.8rem; }
+  .product-card-name { font-size: 0.88rem; }
+  .product-card-price { font-size: 1rem; }
+
+  /* Recommendation header */
+  .recommendation-header { flex-direction: column; align-items: flex-start; }
+
+  /* Chatbot */
+  #chatbot-panel {
+    left: 0.5rem;
+    right: 0.5rem;
+    width: auto;
+    bottom: 5.5rem;
+    max-height: 60vh;
+  }
+
+  /* Gallery */
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .gallery-item:nth-child(3n+2) { aspect-ratio: 3/4; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  /* Grid utilities */
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+
+  /* Tabs */
+  .tabs { gap: 0.4rem; }
+  .tab-btn { padding: 0.5rem 1rem; font-size: 0.82rem; }
+
+  /* Swatches */
+  .swatch { width: 46px; height: 46px; }
+}
+
+/* ── Mobile (max 480px) ── */
+@media (max-width: 480px) {
+  .container { padding: 0 1rem; }
+
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn { justify-content: center; }
+
+  .camera-controls { flex-direction: column; }
+  .camera-controls .btn { width: 100%; justify-content: center; }
+
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+
+  .swatches-row { gap: 0.6rem; }
+  .swatch { width: 40px; height: 40px; }
+
+  #chatbot-fab { left: 1rem; bottom: 1rem; }
+  #toast-container { right: 1rem; bottom: 1rem; left: 1rem; }
+  .toast { font-size: 0.82rem; }
+
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .skin-swatch { width: 34px; height: 34px; }
+
+  .profile-grid { gap: 1.5rem; }
+  .pref-form { gap: 1.25rem; }
+}
+
+/* ── Landscape phones ── */
+@media (max-height: 600px) and (orientation: landscape) {
+  #hero { min-height: auto; padding: 5rem 0 3rem; }
+  .hero-content { padding-top: 5rem; }
+  #chatbot-panel { max-height: 75vh; }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
